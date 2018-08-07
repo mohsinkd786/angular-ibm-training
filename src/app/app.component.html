@@ -17,4 +17,43 @@
     <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
   </li>
 </ul>
+<div>{{user.phone | currency:"GBP"}}</div>
+{{values}}
+<select (change)="verify()">
 
+  <option *ngFor="let a of values">{{a}}</option>
+</select>
+<div>
+  <p appHeader>Hello how r u</p>
+</div>
+Footer DIRECTIVE
+
+<div appFooter>
+    <b>Footer Directive</b>
+</div>
+
+ <div>
+   Router:<a routerLink="home">Home Component</a>
+ </div>
+<div>
+    Index : <a [routerLink]="['index','10']">Index Component</a>
+<br/>    <a routerLink="index/10">Index </a>
+</div>
+<router-outlet></router-outlet>
+
+<!--Template -->
+
+
+<div>
+   <span *ngIf = "isBetter;then angular else react">Which framework is better.</span>
+   <ng-template #angular>Angular is better</ng-template>
+   <ng-template #react>React is better</ng-template>
+</div>
+
+
+<app-tform></app-tform>
+
+
+
+
+<app-consumer></app-consumer>
